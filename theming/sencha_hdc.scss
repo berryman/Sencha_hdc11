@@ -1,0 +1,90 @@
+$base-color: #666;
+$base-gradient: glossy;
+$include-default-icons: false;
+$loading-spinner-color: #1C1A1A;
+$sencha_hdc-font-color: #E09B1B;
+
+@import 'sencha-touch/default/all';
+@include sencha-panel;
+@include sencha-buttons;
+@include sencha-sheet;
+@include sencha-tabs;
+@include sencha-toolbar;
+@include sencha-layout;
+@include sencha-loading-spinner;
+@include sencha-list-pullrefresh;
+
+@include pictos-iconmask('photos2');
+
+.x-toolbar-title {
+  font-family: arial, serif;
+  font-weight: normal;
+  font-size: 1.6em;
+  line-height: 1.4em;
+}
+
+.x-toolbar-title img{
+  margin-top:5px;
+}
+
+.x-list {
+  background-color:#eee;
+}
+
+.username{
+  color: $sencha_hdc-font-color;
+  text-shadow: 0 1px 0 rgba(#000, .5) ;
+}
+
+.photoCell {
+
+  min-height:80px;
+  font-family: 'Gruppo', arial, serif;
+  
+  padding: 5px 10px;
+  border-bottom: 1px solid #41352c;
+  border-top: 1px solid #41352c;
+  background: #fff url('../theming/images/background.png') repeat-x scroll top left;
+  margin:0 auto;
+
+  .item-wrap{
+    text-align:center;
+  }
+
+  img.photoCell-image {
+    display: inline-block;
+    float:left;
+	width: 70px;
+	height: 70px;
+    padding: 2px;
+    margin: 0px auto;
+    border: 1px solid #666;
+    -webkit-box-shadow: 0 0 4px rgba(#333, .5);
+    background:#eee;
+  }
+
+  .copy-wrap {
+    display: inline-block;
+    margin:0 10px;
+    float:right;
+    text-shadow: 0 1px 0 rgba(#fff, .5) ;
+    h2 {
+      margin-top:10px;
+      font-size:1em;
+      overflow : hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  .created {
+    float:right;
+  }
+}
+
+#current-gram {
+	max-height: 100%;
+	height: 100%;
+}
